@@ -1,0 +1,67 @@
+{
+  "app": {
+    "name": "KrishiUddyog AI",
+    "tagline": "Empowering Indian Farmers with Artificial Intelligence"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "cropRecommendation": "Crop Recommendation",
+    "mandiPrices": "Mandi Prices",
+    "diseaseDetection": "Disease Detection",
+    "assistant": "KrishiMitra",
+    "marketplace": "Marketplace",
+    "logout": "Logout"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "phone": "Mobile Number",
+    "password": "Password",
+    "name": "Full Name",
+    "role": "I am a",
+    "farmer": "Farmer",
+    "buyer": "Buyer"
+  },
+  "crop": {
+    "title": "AI Crop Recommendation",
+    "subtitle": "Get personalized crop suggestions",
+    "soilType": "Soil Type",
+    "season": "Season",
+    "kharif": "Kharif (June-November)",
+    "rabi": "Rabi (November-April)",
+    "zaid": "Zaid (March-June)",
+    "submit": "Get AI Recommendations",
+    "loading": "AI is analyzing..."
+  },
+  "mandi": {
+    "title": "Live Mandi Prices",
+    "subtitle": "Real-time commodity prices",
+    "search": "Search Prices",
+    "commodity": "Commodity",
+    "trending": "Today's Trending"
+  },
+  "disease": {
+    "title": "Disease Detection",
+    "subtitle": "AI-powered crop disease diagnosis",
+    "upload": "Upload crop photo",
+    "detect": "Detect Disease",
+    "healthy": "Your crop is healthy!",
+    "treatment": "Treatment",
+    "prevention": "Prevention Tips"
+  },
+  "assistant": {
+    "title": "KrishiMitra AI",
+    "subtitle": "Your multilingual farming assistant",
+    "placeholder": "Type your farming question here...",
+    "send": "Send",
+    "clear": "Clear Chat",
+    "greeting": "Hello! I am KrishiMitra. Ask me anything about farming!"
+  },
+  "marketplace": {
+    "title": "Buyer Marketplace",
+    "subtitle": "Buy directly from farmers",
+    "contact": "Contact Seller",
+    "listCrop": "List Your Crop",
+    "noListings": "No listings found"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "app": { "name": "ਕ੍ਰਿਸ਼ੀ ਉਦਯੋਗ AI", "tagline": "ਨਕਲੀ ਬੁੱਧੀ ਨਾਲ ਭਾਰਤੀ ਕਿਸਾਨਾਂ ਨੂੰ ਸਸ਼ਕਤ ਕਰਨਾ" },
+  "nav": { "dashboard": "ਡੈਸ਼ਬੋਰਡ", "cropRecommendation": "ਫਸਲ ਸਿਫਾਰਸ਼", "mandiPrices": "ਮੰਡੀ ਭਾਅ", "diseaseDetection": "ਰੋਗ ਪਛਾਣ", "assistant": "ਕ੍ਰਿਸ਼ੀ ਮਿੱਤਰ", "marketplace": "ਬਾਜ਼ਾਰ", "logout": "ਲੌਗਆਊਟ" },
+  "crop": { "title": "AI ਫਸਲ ਸਿਫਾਰਸ਼", "submit": "AI ਸਿਫਾਰਸ਼ਾਂ ਪ੍ਰਾਪਤ ਕਰੋ", "loading": "AI ਵਿਸ਼ਲੇਸ਼ਣ ਕਰ ਰਿਹਾ ਹੈ..." },
+  "mandi": { "title": "ਲਾਈਵ ਮੰਡੀ ਭਾਅ", "search": "ਖੋਜੋ" },
+  "disease": { "title": "ਰੋਗ ਪਛਾਣ", "detect": "ਰੋਗ ਪਛਾਣੋ", "healthy": "ਤੁਹਾਡੀ ਫਸਲ ਸਿਹਤਮੰਦ ਹੈ!" },
+  "assistant": { "title": "ਕ੍ਰਿਸ਼ੀ ਮਿੱਤਰ AI", "placeholder": "ਇੱਥੇ ਆਪਣਾ ਸਵਾਲ ਲਿਖੋ...", "send": "ਭੇਜੋ", "greeting": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! ਮੈਂ ਕ੍ਰਿਸ਼ੀ ਮਿੱਤਰ ਹਾਂ। ਖੇਤੀਬਾੜੀ ਬਾਰੇ ਕੁਝ ਵੀ ਪੁੱਛੋ!" },
+  "marketplace": { "title": "ਕਿਸਾਨ ਬਾਜ਼ਾਰ", "contact": "ਕਿਸਾਨ ਨਾਲ ਸੰਪਰਕ ਕਰੋ", "listCrop": "ਆਪਣੀ ਫਸਲ ਸੂਚੀਬੱਧ ਕਰੋ" }
+}

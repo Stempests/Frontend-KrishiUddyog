@@ -1,0 +1,9 @@
+{
+  "app": { "name": "कृषी उद्योग AI", "tagline": "कृत्रिम बुद्धिमत्तेने भारतीय शेतकऱ्यांना सक्षम करणे" },
+  "nav": { "dashboard": "डॅशबोर्ड", "cropRecommendation": "पीक शिफारस", "mandiPrices": "मंडी भाव", "diseaseDetection": "रोग ओळख", "assistant": "कृषी मित्र", "marketplace": "बाज़ार", "logout": "लॉगआउट" },
+  "crop": { "title": "AI पीक शिफारस", "submit": "AI शिफारस मिळवा", "loading": "AI विश्लेषण करत आहे..." },
+  "mandi": { "title": "थेट मंडी भाव", "search": "शोधा" },
+  "disease": { "title": "रोग ओळख", "detect": "रोग ओळखा", "healthy": "तुमचे पीक निरोगी आहे!" },
+  "assistant": { "title": "कृषी मित्र AI", "placeholder": "येथे तुमचा प्रश्न लिहा...", "send": "पाठवा", "greeting": "नमस्कार! मी कृषी मित्र आहे. शेतीबद्दल काहीही विचारा!" },
+  "marketplace": { "title": "शेतकरी बाज़ार", "contact": "शेतकऱ्याशी संपर्क करा", "listCrop": "तुमचे पीक सूचीबद्ध करा" }
+}
