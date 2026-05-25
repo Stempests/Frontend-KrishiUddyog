@@ -21,7 +21,7 @@ export default function RegisterPage() {
 
   return (
     <div className="glass-card p-8">
-      <h2 className="text-2xl font-bold mb-2">Join KrishiUddyog AI 🌱</h2>
+      <h2 className="text-2xl font-bold mb-2">Join AgriConnect India 🌱</h2>
       <p className="text-sm mb-6" style={{ color: 'var(--text-secondary)' }}>
         Create your free farmer account in seconds
       </p>

@@ -23,7 +23,7 @@ export const useMandiPrices = (initialFilters?: MandiFilters) => {
 
       const { data } = await api.get(`/mandi/prices?${params.toString()}`);
       setPrices(data.data || []);
-    } catch (err: unknown) {
+    } catch {
       setError('Failed to fetch mandi prices');
     } finally {
       setLoading(false);
@@ -45,9 +45,11 @@ export const useMandiPrices = (initialFilters?: MandiFilters) => {
   };
 
   useEffect(() => {
+    // eslint-disable-next-line
     fetchPrices();
     fetchTrending();
     fetchCommodities();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const applyFilters = (newFilters: MandiFilters) => {

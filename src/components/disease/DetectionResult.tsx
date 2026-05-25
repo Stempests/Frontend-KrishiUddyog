@@ -75,7 +75,7 @@ export const DetectionResult = ({ report }: DetectionResultProps) => {
           {/* Treatment */}
           {diagnosis.treatment?.length > 0 && (
             <div className="p-4 rounded-xl" style={{ background: 'rgba(34,197,94,0.05)', border: '1px solid rgba(34,197,94,0.15)' }}>
-              <h3 className="font-semibold text-sm mb-2 text-green-400">💊 Treatment Steps</h3>
+              <h3 className="font-semibold text-sm mb-2 text-green-700">💊 Treatment Steps</h3>
               <ul className="space-y-1">
                 {diagnosis.treatment.map((t, i) => (
                   <li key={i} className="text-sm" style={{ color: 'var(--text-secondary)' }}>• {t}</li>
@@ -87,7 +87,7 @@ export const DetectionResult = ({ report }: DetectionResultProps) => {
           {/* Organic */}
           {diagnosis.organicRemedies?.length > 0 && (
             <div className="p-4 rounded-xl" style={{ background: 'rgba(245,158,11,0.05)', border: '1px solid rgba(245,158,11,0.15)' }}>
-              <h3 className="font-semibold text-sm mb-2 text-amber-400">🌿 Organic Remedies</h3>
+              <h3 className="font-semibold text-sm mb-2 text-amber-700">🌿 Organic Remedies</h3>
               <ul className="space-y-1">
                 {diagnosis.organicRemedies.map((r, i) => (
                   <li key={i} className="text-sm" style={{ color: 'var(--text-secondary)' }}>• {r}</li>
@@ -100,7 +100,7 @@ export const DetectionResult = ({ report }: DetectionResultProps) => {
 
       {diagnosis.isHealthy && (
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="p-4 rounded-xl text-center" style={{ background: 'rgba(34,197,94,0.08)', border: '1px solid rgba(34,197,94,0.2)' }}>
-          <p className="text-green-400 font-bold text-lg">🌱 Your crop is healthy!</p>
+          <p className="text-green-700 font-bold text-lg">🌱 Your crop is healthy!</p>
           <p className="text-sm mt-1" style={{ color: 'var(--text-secondary)' }}>Continue your current care routine.</p>
         </motion.div>
       )}

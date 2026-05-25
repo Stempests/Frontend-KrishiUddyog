@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "KrishiUddyog AI",
+    "name": "AgriConnect India",
     "tagline": "Empowering Indian Farmers with Artificial Intelligence"
   },
   "nav": {
@@ -10,7 +10,9 @@
     "diseaseDetection": "Disease Detection",
     "assistant": "KrishiMitra",
     "marketplace": "Marketplace",
-    "logout": "Logout"
+    "logout": "Logout",
+    "backToHome": "Back to Home",
+    "home": "Home"
   },
   "auth": {
     "login": "Login",

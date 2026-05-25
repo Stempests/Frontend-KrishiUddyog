@@ -43,7 +43,10 @@ export const useAuth = () => {
 
   const handleLogout = () => {
     logout();
-    router.push('/login');
+    // router.refresh() clears Next.js's client router cache so the middleware
+    // re-evaluates and the dashboard layout unmounts immediately.
+    router.refresh();
+    router.push('/');
   };
 
   return { user, token, isAuthenticated, loading, error, login, register, logout: handleLogout };

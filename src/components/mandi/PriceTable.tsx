@@ -74,8 +74,8 @@ export const PriceTable = ({ prices, loading }: PriceTableProps) => {
                   <div>{price.state}</div>
                   <div className="text-xs" style={{ color: 'var(--text-muted)' }}>{price.district}</div>
                 </td>
-                <td className="px-4 py-3 text-red-400 font-medium">₹{price.minPrice?.toLocaleString()}</td>
-                <td className="px-4 py-3 text-green-400 font-medium">₹{price.maxPrice?.toLocaleString()}</td>
+                <td className="px-4 py-3 text-red-600 font-medium">₹{price.minPrice?.toLocaleString()}</td>
+                <td className="px-4 py-3 text-green-700 font-medium">₹{price.maxPrice?.toLocaleString()}</td>
                 <td className="px-4 py-3 font-bold gradient-text">₹{price.modalPrice?.toLocaleString()}</td>
                 <td className="px-4 py-3 text-xs whitespace-nowrap" style={{ color: 'var(--text-muted)' }}>
                   {new Date(price.arrivalDate).toLocaleDateString('en-IN')}
@@ -86,7 +86,7 @@ export const PriceTable = ({ prices, loading }: PriceTableProps) => {
         </table>
       </div>
       <div className="px-4 py-3 text-xs" style={{ color: 'var(--text-muted)', borderTop: '1px solid var(--bg-border)' }}>
-        Showing {prices.length} records • Price per quintal • Source: data.gov.in Agmarknet
+        Showing {prices.length} records • Price per quintal • Source: AgriConnect Market Database
       </div>
     </div>
   );

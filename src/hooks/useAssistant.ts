@@ -34,7 +34,7 @@ export const useAssistant = () => {
       const { data } = await api.post('/assistant/chat', {
         message: content,
         language,
-        conversationId,
+        ...(conversationId && { conversationId }),
       });
 
       const assistantMessage: Message = {

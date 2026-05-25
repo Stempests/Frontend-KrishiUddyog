@@ -16,10 +16,10 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="glass-card p-8">
-      <h2 className="text-2xl font-bold mb-2">Welcome Back! 👋</h2>
-      <p className="text-sm mb-6" style={{ color: 'var(--text-secondary)' }}>
-        Login to your KrishiUddyog account
+    <div className="glass-card p-8 flex flex-col items-center">
+      <h2 className="text-2xl font-bold mb-2 text-center">Welcome Back! 👋</h2>
+      <p className="text-sm mb-6 text-center w-full" style={{ color: 'var(--text-secondary)' }}>
+        Login to your AgriConnect account
       </p>
 
       {error && (
@@ -28,7 +28,7 @@ export default function LoginPage() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 w-full">
         <div>
           <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>
             📱 Mobile Number

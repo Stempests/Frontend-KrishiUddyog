@@ -3,10 +3,12 @@ import { useState, useEffect } from 'react';
 import api from '@/lib/api';
 import { Listing, QUALITY_LABELS } from '@/types/marketplace.types';
 import { INDIAN_STATES } from '@/types/crop.types';
+import { useLanguageStore } from '@/store/languageStore';
 import Image from 'next/image';
 
 export default function MarketplacePage() {
   const [listings, setListings] = useState<Listing[]>([]);
+  const { t } = useLanguageStore();
   const [loading, setLoading] = useState(true);
   const [crop, setCrop] = useState('');
   const [state, setState] = useState('');
@@ -31,7 +33,11 @@ export default function MarketplacePage() {
     }
   };
 
-  useEffect(() => { fetchListings(1); }, []);
+  useEffect(() => { 
+    // eslint-disable-next-line
+    fetchListings(1); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSearch = () => { setPage(1); fetchListings(1); };
 
@@ -41,11 +47,11 @@ export default function MarketplacePage() {
     <div className="page-wrapper">
       <div className="mb-8 flex items-start justify-between">
         <div>
-          <h1 className="text-3xl font-bold mb-2">🛒 Buyer Marketplace</h1>
-          <p style={{ color: 'var(--text-secondary)' }}>बाज़ार — Buy directly from farmers, no middlemen</p>
+          <h1 className="text-3xl font-bold mb-2">🛒 {t('marketplace.title', 'Buyer Marketplace')}</h1>
+          <p style={{ color: 'var(--text-secondary)' }}>{t('marketplace.subtitle', 'Buy directly from farmers, no middlemen')}</p>
         </div>
         <a href="/dashboard/marketplace/create" className="btn-primary text-sm">
-          + List Your Crop
+          + {t('marketplace.listCrop', 'List Your Crop')}
         </a>
       </div>
 
@@ -53,22 +59,22 @@ export default function MarketplacePage() {
       <div className="glass-card p-5 mb-8">
         <div className="grid md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>🌾 Crop</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>🌾 {t('marketplace.cropLabel', 'Crop')}</label>
             <select id="market-crop" value={crop} onChange={(e) => setCrop(e.target.value)} className="input-field">
-              <option value="">All Crops</option>
+              <option value="">{t('marketplace.allCrops', 'All Crops')}</option>
               {CROP_OPTIONS.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>🗺️ State</label>
+            <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-secondary)' }}>🗺️ {t('marketplace.stateLabel', 'State')}</label>
             <select id="market-state" value={state} onChange={(e) => setState(e.target.value)} className="input-field">
-              <option value="">All States</option>
+              <option value="">{t('marketplace.allStates', 'All States')}</option>
               {INDIAN_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
           </div>
           <div className="flex items-end">
             <button id="market-search" onClick={handleSearch} className="btn-primary w-full">
-              🔍 Search Listings
+              🔍 {t('marketplace.searchBtn', 'Search Listings')}
             </button>
           </div>
         </div>
@@ -77,7 +83,7 @@ export default function MarketplacePage() {
       {/* Count */}
       {!loading && (
         <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
-          Found <span className="font-bold" style={{ color: 'var(--color-primary)' }}>{total}</span> active listings
+          {t('marketplace.foundLabel', 'Found')} <span className="font-bold" style={{ color: 'var(--color-primary)' }}>{total}</span> {t('marketplace.activeListings', 'active listings')}
         </p>
       )}
 
@@ -91,10 +97,10 @@ export default function MarketplacePage() {
       ) : listings.length === 0 ? (
         <div className="glass-card p-12 text-center">
           <div className="text-5xl mb-4">🛒</div>
-          <h3 className="text-xl font-bold mb-2">No Listings Found</h3>
-          <p style={{ color: 'var(--text-secondary)' }}>Be the first to list your crop in this market!</p>
+          <h3 className="text-xl font-bold mb-2">{t('marketplace.noListings', 'No Listings Found')}</h3>
+          <p style={{ color: 'var(--text-secondary)' }}>{t('marketplace.noListingsSub', 'Be the first to list your crop in this market!')}</p>
           <a href="/dashboard/marketplace/create" className="btn-primary mt-4 inline-block">
-            + Create First Listing
+            + {t('marketplace.createListing', 'Create First Listing')}
           </a>
         </div>
       ) : (
@@ -132,7 +138,7 @@ export default function MarketplacePage() {
                       </div>
                       <div className="text-right">
                         <p className="text-xl font-bold gradient-text">₹{listing.pricePerUnit?.toLocaleString()}</p>
-                        <p className="text-xs" style={{ color: 'var(--text-muted)' }}>per {listing.unit}</p>
+                        <p className="text-xs" style={{ color: 'var(--text-muted)' }}>{t('marketplace.perUnit', 'per')} {listing.unit}</p>
                       </div>
                     </div>
 
@@ -152,7 +158,7 @@ export default function MarketplacePage() {
                       href={`tel:${listing.sellerId?.phone}`}
                       className="btn-primary w-full text-sm py-2"
                     >
-                      📞 Contact Seller
+                      📞 {t('marketplace.contactSeller', 'Contact Seller')}
                     </a>
                   </div>
                 </div>

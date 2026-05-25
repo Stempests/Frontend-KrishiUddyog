@@ -9,6 +9,7 @@ interface UIStore {
   toggleMobileMenu: () => void;
   setLoading: (loading: boolean) => void;
   closeMobileMenu: () => void;
+  toggleTheme: () => void;
 }
 
 export const useUIStore = create<UIStore>((set) => ({
@@ -21,4 +22,5 @@ export const useUIStore = create<UIStore>((set) => ({
   toggleMobileMenu: () => set((s) => ({ isMobileMenuOpen: !s.isMobileMenuOpen })),
   closeMobileMenu: () => set({ isMobileMenuOpen: false }),
   setLoading: (loading) => set({ isLoading: loading }),
+  toggleTheme: () => set((s) => ({ theme: s.theme === 'dark' ? 'light' : 'dark' })),
 }));

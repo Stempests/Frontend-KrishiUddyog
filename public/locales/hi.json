@@ -10,7 +10,9 @@
     "diseaseDetection": "रोग पहचान",
     "assistant": "कृषि मित्र",
     "marketplace": "बाज़ार",
-    "logout": "लॉगआउट"
+    "logout": "लॉगआउट",
+    "backToHome": "मुख्य पृष्ठ पर जाएं",
+    "home": "होम"
   },
   "auth": {
     "login": "लॉगिन",

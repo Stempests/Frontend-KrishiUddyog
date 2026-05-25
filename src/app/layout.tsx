@@ -1,21 +1,22 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { LanguageHydrator } from '@/components/LanguageHydrator';
+import { ThemeHydrator } from '@/components/ThemeHydrator';
 
 export const metadata: Metadata = {
   title: {
-    default: 'KrishiUddyog AI — Empowering Indian Farmers',
-    template: '%s | KrishiUddyog AI',
+    default: 'AgriConnect — Smart Farming, Better Tomorrow',
+    template: '%s | AgriConnect',
   },
   description:
-    'AI-powered platform for Indian farmers. Get crop recommendations, mandi prices, disease detection, multilingual assistant, and connect with buyers.',
+    'AgriConnect is a smart farming dashboard providing live mandi prices, disease detection, weather updates, and AI-powered agricultural recommendations.',
   keywords: [
-    'Indian farming', 'AI agriculture', 'mandi prices', 'crop recommendation',
-    'kisan', 'krishi', 'farmer app', 'KrishiUddyog',
+    'AgriConnect', 'Smart Farming', 'Indian farming', 'AI agriculture', 'mandi prices', 'crop recommendation',
   ],
-  authors: [{ name: 'KrishiUddyog AI Team' }],
+  authors: [{ name: 'AgriConnect Team' }],
   openGraph: {
-    title: 'KrishiUddyog AI',
-    description: 'Empowering Indian Farmers with Artificial Intelligence',
+    title: 'AgriConnect Dashboard',
+    description: 'Empowering Farmers with Smart Farming Dashboard',
     type: 'website',
   },
 };
@@ -23,17 +24,21 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#22c55e',
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hi" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
-      <body>{children}</body>
+      <body>
+        <LanguageHydrator />
+        <ThemeHydrator />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,7 +1,7 @@
 // ── App-Wide Constants ────────────────────────────────────────────────────────
 
-export const APP_NAME = 'KrishiUddyog AI';
-export const APP_TAGLINE = 'Empowering Indian Farmers with Artificial Intelligence';
+export const APP_NAME = 'AgriConnect India';
+export const APP_TAGLINE = 'Empowering Indian Farmers with Smart Agricultural Solutions';
 
 export const LANGUAGES = [
   { code: 'hi', name: 'हिंदी', englishName: 'Hindi', flag: '🇮🇳' },
@@ -20,6 +20,7 @@ export const NAV_ITEMS = [
   { label: 'Disease AI', labelHi: 'रोग पहचान', href: '/dashboard/disease-detection', icon: 'Microscope' },
   { label: 'KrishiMitra', labelHi: 'कृषि मित्र', href: '/dashboard/assistant', icon: 'MessageCircle' },
   { label: 'Marketplace', labelHi: 'बाज़ार', href: '/dashboard/marketplace', icon: 'ShoppingCart' },
+  { label: 'Logistics', labelHi: 'परिवहन', href: '/dashboard/logistics', icon: 'Truck' },
 ] as const;
 
 export const SEASON_INFO = {
