@@ -62,7 +62,7 @@ export default function SettingsPage() {
       
       toast.success(t('settings.saveSuccess', 'Profile updated successfully'));
       setIsEditing(false);
-    } catch (error: unknown) {
+    } catch (error: any) {
       console.error('Profile update error:', error);
       toast.error(error.response?.data?.message || 'Failed to update profile');
     } finally {
